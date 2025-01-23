@@ -1,0 +1,132 @@
+/* Style for the error message */
+/* Style for the error message */
+#viewerAmountRegularError {
+    font-size: 0.9rem;
+    color: #dc3545; /* Bootstrap's danger color */
+    margin-top: 5px;
+}
+
+/* Style for the disabled purchase button */
+.template-btn.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* Loading Overlay Styles */
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above other elements */
+}
+
+/* Spinner Styles */
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+/* Spin Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom styles for the Chatters Promotion Section */
+.chatters-promo-section {
+    background-color: #f8f9fa; /* Light background color */
+    position: relative;
+    overflow: hidden;
+}
+
+.chatters-promo-section::before {
+    content: '';
+    background-image: url('assets/img/shapes/line-red.svg'); /* Use an existing decorative image */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    opacity: 0.1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.chatters-promo-section h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.chatters-promo-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.chatters-promo-section .template-btn {
+    margin-top: 20px;
+}
+
+/* Custom styles for spacing adjustment */
+@media (min-width: 768px) {
+    /* Reduce spacing between the 'Thank You' and 'Hire Chatters' sections */
+    .thank-you-section {
+        padding-bottom: 40px; /* Adjust as needed */
+    }
+
+    .chatters-promo-section {
+        padding-top: 40px; /* Adjust as needed */
+    }
+}
+
+/* Fix for header shaking issue on the Thank You page */
+
+/* Optional: Ensure these styles only apply to the Thank You page */
+.thank-you-page .header-section {
+    position: static !important;
+    top: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    height: auto !important;
+}
+
+.thank-you-page .header-section * {
+    position: relative !important;
+    transform: none !important;
+}
+
+.thank-you-page .header-nav,
+.thank-you-page .nav-menu {
+    position: relative !important;
+    top: 0 !important;
+}
+
+/* Prevent any fixed or sticky positioning on child elements */
+.thank-you-page .header-section .topbar,
+.thank-you-page .header-section .header-nav,
+.thank-you-page .header-section .nav-menu,
+.thank-you-page .header-section .logo-wrapper,
+.thank-you-page .header-section nav,
+.thank-you-page .header-section ul,
+.thank-you-page .header-section li,
+.thank-you-page .header-section a {
+    position: relative !important;
+}
+
+/* Override z-index if necessary */
+.thank-you-page .header-section {
+    z-index: auto !important;
+}

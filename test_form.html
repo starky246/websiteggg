@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Create Invoice</title>
+</head>
+<body>
+    <h1>Test Create Invoice</h1>
+    <form action="create_invoice.php" method="POST">
+        <label for="viewerAmount">Viewer Amount:</label>
+        <input type="number" name="viewerAmount" id="viewerAmount" value="100" min="50" required><br><br>
+
+        <label for="streamingHours">Streaming Hours:</label>
+        <input type="number" name="streamingHours" id="streamingHours" value="10" min="1" required><br><br>
+
+        <input type="submit" value="Create Invoice">
+    </form>
+</body>
+</html>
